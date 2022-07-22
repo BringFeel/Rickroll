@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:image" content="https://www.iconpacks.net/icons/2/free-server-icon-1927-thumb.png"/>
+    <link rel="shortcut icon" href="https://www.iconpacks.net/icons/2/free-server-icon-1927-thumb.png" type="image/x-icon" />
+	<meta property="og:title" content="Xanarky Free Hosting"/>
+	<meta name="title" content="Xanarky Free Hosting"/>
+	<meta property="og:description" content="Offering high-quality hosting solutions to cover all your needs. Affordable VPS Hosting, Minecraft hosting and Game servers."/>
+	<meta name="description" content="Offering high-quality hosting solutions to cover all your needs. Affordable VPS Hosting, Minecraft hosting and Game servers."/>
+	
+    <title>Xanarky Free Hosting</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+    
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-min.css">
+    <!--<![endif]-->
+    
+    
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="css/layouts/blog-old-ie.css">
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+            <link rel="stylesheet" href="css/layouts/blog.css">
+        <!--<![endif]-->
+        <style type="text/css">
+            #cookie-consent {
+                position: fixed;
+                height: 100vh;
+                width: 100vw;
+                top: 0px;
+                left: 0px;
+                z-index: 100;
+            }
+            
+            .cookie-consent-background {
+                position: absolute;
+                height: 100vh;
+                width: 100vw;
+                top: 0px;
+                left: 0px;
+                z-index: 101;
+                background-image: url('https://cdn.discordapp.com/attachments/952037899170373672/999885139800768602/unknown.png');
+                background-size: cover;
+                background-color: black;
+            }
+
+            @media only screen and (max-width: 1050px) {
+                .cookie-consent-background {
+                    background-image: url('https://cdn.discordapp.com/attachments/952037899170373672/999885139800768602/unknown.png');
+                    background-color: black;
+                }
+            }
+
+            @media only screen and (max-width: 550px) {
+                .cookie-consent-background {
+                    background-image: url('https://cdn.discordapp.com/attachments/952037899170373672/999885200471363694/unknown.png');
+                    background-color: black;
+                }
+            }
+
+            .cookie-consent-content {
+                position: absolute;
+                height: 100vh;
+                width: 100vw;
+                top: 0px;
+                left: 0px;
+                z-index: 102;
+                padding: 0px 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                backdrop-filter: blur(10px);
+                background-color: rgba(0, 0, 0, .4);
+            }
+
+            .text-white {
+                color: white;
+                font-family: Arial, Helvetica, sans-serif
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            #vid-blocker {
+                position:absolute;
+                top: 0px;
+                left: 0px;
+                height: 100%;
+                width: 100%;
+            }
+
+            #video-frame {
+                width:100%;
+            }
+
+            @media only screen and (min-width: 1400px) {
+                #video-frame {
+                    width: 100%;
+                }
+            }
+
+            body {
+                background-color: black;
+            }
+        </style>
+</head>
+<body>
+
+<div id="layout" class="pure-g">
+    <div id="cookie-consent" class="pure-u-1">
+        <div class="cookie-consent-background"></div>
+        <div class="cookie-consent-content">
+            <h3 class="text-white">
+                We use cookies to offer a better user experience
+            </h3>
+            <p class="brand-tagline text-white">
+                Accept or reject below
+            </p>
+            <p>
+                <button class="pure-button button-large">Accept</button>    
+                <button class="pure-button button-large decline-button">Decline</button>    
+            </p>
+        </div>
+    </div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+                        <div class="vid-div">
+                            <div id="vid-blocker"></div>
+                            <iframe id="video-frame" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?&enablejsapi=1&autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </section>
+    </div>
+</div>
+<script type="text/javascript">
+    var player;
+    var frame = document.querySelector('#video-frame');
+    var cookieConsent = document.querySelector('#cookie-consent');
+    var firstScriptTag = document.querySelector('script');
+    var tag = document.createElement('script');
+    tag.id = 'iframe-demo';
+    tag.src = 'https://www.youtube.com/iframe_api';
+    frame.setAttribute('height', Math.floor(frame.clientWidth * .6));
+
+    cookieConsent.addEventListener('click', () => {
+        player.seekTo(0);
+        player.unMute();
+        cookieConsent.classList.add('hidden');
+    });
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('video-frame');
+    }
+
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-94067710-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-94067710-2', { 'anonymize_ip': true });
+</script>
+</body>
+</html>
